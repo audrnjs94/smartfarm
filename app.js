@@ -3,6 +3,8 @@ const express = require('express');
 const app = express();
 const userRouter = require('./userRouter');
 
+
+app.use(express.static('public'));
 app.use('/user', userRouter);
 
 app.get('/', function(req, res) {
